@@ -8,9 +8,10 @@ authors:
 - Amitay Horwitz
 
 requires:
-- More/Interface/Mask
+- more/1.3.1.1: [Mask]
 
-provides: [Mask.Fx]
+provides:
+- Mask.Fx
 
 ...
 */
