@@ -29,7 +29,7 @@ Mask.Fx = new Class({
         }
     },
 
-	destroyOnHide = false,
+	destroyOnHide: false,
 
     initialize: function(target, options){
 		this.destroyOnHide = options.destroyOnHide;
