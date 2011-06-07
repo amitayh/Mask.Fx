@@ -32,7 +32,7 @@ Mask.Fx = new Class({
 	destroyOnHide: false,
 
     initialize: function(target, options){
-this.destroyOnHide = options.destroyOnHide;
+    this.destroyOnHide = options.destroyOnHide;
 options.destroyOnHide = false;
         this.parent(target, options);
         this.element.set('tween', this.options.fx);
