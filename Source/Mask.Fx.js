@@ -29,7 +29,11 @@ Mask.Fx = new Class({
         }
     },
 
+	destroyOnHide: false,
+
     initialize: function(target, options){
+        this.destroyOnHide = options.destroyOnHide;
+        options.destroyOnHide = false;
         this.parent(target, options);
         this.element.set('tween', this.options.fx);
         this.element.get('tween').set(this.options.fx.property, this.options.start);
@@ -48,6 +52,9 @@ Mask.Fx = new Class({
         this.hidden = true;
         this.fireEvent('hide');
         this.element.get('tween').start(this.options.start).chain(function() {
+            if (this.destroyOnHide) {
+                this.destroy();
+            }
             this.fireEvent('hideEnd');
         }.bind(this));
     }
