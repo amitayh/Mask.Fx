@@ -52,8 +52,9 @@ Mask.Fx = new Class({
         this.hidden = true;
         this.fireEvent('hide');
         this.element.get('tween').start(this.options.start).chain(function() {
-            if(this.destroyOnHide)
+            if (this.destroyOnHide) {
                 this.destroy();
+            }
             this.fireEvent('hideEnd');
         }.bind(this));
     }
